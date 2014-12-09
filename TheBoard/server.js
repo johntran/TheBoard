@@ -3,11 +3,13 @@ var express = require('express');
 var app = express();
 
 // Setup the View Engine
-app.set("view engine", "jade");
+//app.set("view engine", "jade");
+//app.engine("ejs", ejsEngine); // support master pages
+app.set("view engine", "ejs"); // ejs view engine
 
 app.get("/", function (req, res) { 
     //res.send("beep");
-    res.render("jade/index", { title: "Express + Jade" });
+    res.render("ejs/index", { title: "Express + Jade" });
 
 });
 
