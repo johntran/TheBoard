@@ -8,6 +8,8 @@ var controllers = require("./controllers");
 //app.engine("ejs", ejsEngine); // support master pages
 app.set("view engine", "jade"); // jade view engine
 
+// set publci static resource folder
+app.use(express.static(__dirname + "/public"));
 
 //Map the routes
 controllers.init(app);

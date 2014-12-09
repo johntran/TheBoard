@@ -2,3 +2,8 @@
 block content
         h1= title
         p This is an express app!
+
+
+        - for category in categories
+            - tr
+                td= category.name
